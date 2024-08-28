@@ -18,6 +18,7 @@ configurations = load_configurations()["message"]
 for config in configurations:
     model_name = config["app_id"]
     schema = {detail['actual_column_name']: detail['data_type'] for detail in config["column_details"]}
+    print(schema)
     topic = config["topic_name"]
     router = generate_route(model_name, schema, topic)
     app.include_router(router)
