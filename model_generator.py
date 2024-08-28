@@ -2,10 +2,10 @@ from pydantic import BaseModel, create_model
 from typing import Dict, Type
 
 type_mapping = {
-    "STRING": str,
     "NUMBER": int,
-    "BOOLEAN": bool,
-    "FLOAT": float
+    "FLOAT": float,
+    "STRING": str,
+    "BOOLEAN": bool
 }
 
 
